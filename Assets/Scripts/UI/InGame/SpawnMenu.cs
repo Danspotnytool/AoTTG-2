@@ -10,15 +10,16 @@ namespace Assets.Scripts.UI.InGame
     {
         public Dropdown EquipmentDropdown;
 
-        private void Start()
-        {
-            EquipmentDropdown.options = new List<Dropdown.OptionData>();
-            foreach (var equipment in Enum.GetNames(typeof(EquipmentType)))
-            {
-                EquipmentDropdown.options.Add(new Dropdown.OptionData(equipment));
-            }
-            EquipmentDropdown.captionText.text = EquipmentDropdown.options[0].text;
-        }
+        //Alex's TO-DO list: populate dropdown
+        //private void Start()
+        //{
+        //    EquipmentDropdown.options = new List<Dropdown.OptionData>();
+        //    foreach (var equipment in Enum.GetNames(typeof(EquipmentType)))
+        //    {
+        //        EquipmentDropdown.options.Add(new Dropdown.OptionData(equipment));
+        //    }
+        //    EquipmentDropdown.captionText.text = EquipmentDropdown.options[0].text;
+        //}
 
         public void Spawn()
         {
