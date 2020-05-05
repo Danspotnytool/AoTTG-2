@@ -2509,14 +2509,14 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
-  EquipmentType: 0
+  ahssGearPrefab: {fileID: 0}
+  bladesGearPrefab: {fileID: 0}
   _state: 0
   audio_ally: {fileID: 82695054796010076}
   audio_hitwall: {fileID: 82538630642059820}
   baseAnimation: {fileID: 0}
   baseRigidBody: {fileID: 0}
   baseTransform: {fileID: 0}
-  bigLean: 0
   bombCD: 0
   bombImmune: 0
   bombRadius: 0

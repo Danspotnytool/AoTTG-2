@@ -2,9 +2,6 @@
 
 public class Blades : OdmgEquipment, Weapon
 {
-    [SerializeField] private GameObject myHero;
-    private Hero myHeroScript;
-
     [SerializeField] private int maxBlades = 5;
     [SerializeField] private float maxBladeDurability = 100f;
     public int NumBlades { get; private set; }
@@ -12,9 +9,6 @@ public class Blades : OdmgEquipment, Weapon
 
     protected override void Awake()
     {
-        myHeroScript = myHero.GetComponent<Hero>();
-        base.Initialize(myHeroScript);
-
         NumBlades = maxBlades;
         BladeDurability = maxBladeDurability;
     }
@@ -23,6 +17,12 @@ public class Blades : OdmgEquipment, Weapon
     {
     }
 
+    public void Resupply()
+    {
+
+    }
+
+    #region Weapon Methods
     public void Attack()
     {
 
@@ -32,9 +32,5 @@ public class Blades : OdmgEquipment, Weapon
     {
 
     }
-
-    public new void Resupply()
-    {
-        base.Resupply();
-    }
+    #endregion
 }
