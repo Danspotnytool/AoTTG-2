@@ -2373,6 +2373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active_me: 0
   currentCamera: {fileID: 0}
+  bladeEquipmentScript: {fileID: 0}
   meatDie: {fileID: 82385810793831916}
   myTeam: 1
   scoreMulti: 1
@@ -2415,6 +2416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active_me: 0
   currentCamera: {fileID: 0}
+  bladeEquipmentScript: {fileID: 0}
   meatDie: {fileID: 82385810793831916}
   myTeam: 1
   scoreMulti: 1
@@ -2509,8 +2511,11 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
-  ahssGearPrefab: {fileID: 0}
-  bladesGearPrefab: {fileID: 0}
+  ahssGearPrefab: {fileID: 1774809143572772, guid: 18f12baa64a111841abb24e2e2490f1e,
+    type: 2}
+  bladesGearPrefab: {fileID: 1005542101653008, guid: eb2045af356052548a1318370a38c10c,
+    type: 2}
+  currentEquipment: {fileID: 0}
   _state: 0
   audio_ally: {fileID: 82695054796010076}
   audio_hitwall: {fileID: 82538630642059820}
@@ -2536,8 +2541,6 @@ MonoBehaviour:
   crossR1: {fileID: 0}
   crossR2: {fileID: 0}
   currentAnimation: 
-  currentBladeNum: 5
-  currentBladeSta: 100
   currentCamera: {fileID: 0}
   currentSpeed: 0
   currentV: {x: 0, y: 0, z: 0}
@@ -2556,7 +2559,6 @@ MonoBehaviour:
   lastHook: {fileID: 0}
   leftbladetrail: {fileID: 0}
   leftbladetrail2: {fileID: 0}
-  leftBulletLeft: 7
   leftGunHasBullet: 1
   maincamera: {fileID: 0}
   maxVelocityChange: 10
@@ -2574,7 +2576,6 @@ MonoBehaviour:
   reloadAnimation: 
   rightbladetrail: {fileID: 0}
   rightbladetrail2: {fileID: 0}
-  rightBulletLeft: 7
   rightGunHasBullet: 1
   rope: {fileID: 82693287769379562}
   setup: {fileID: 0}
@@ -2591,8 +2592,6 @@ MonoBehaviour:
   targetV: {x: 0, y: 0, z: 0}
   throwedBlades: 0
   titanForm: 0
-  totalBladeSta: 100
-  totalGas: 100
   useGun: 0
   InGameUI: {fileID: 0}
   PlayerName: {fileID: 102465881733688448}
