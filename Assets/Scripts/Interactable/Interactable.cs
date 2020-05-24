@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
-public abstract class Interactable : MonoBehaviour
+public class Interactable : MonoBehaviour
 {
     private CapsuleCollider collider;
+
     public int Radius = 7;
 
-    //Text displayed on Interactable wheel.
+    [Tooltip("Text displayed on Interactable wheel")]
     public string Context = "";
-    //Icon displayed on Interactable wheel button.
+
+    [Tooltip("Icon displayed on Interactable wheel button")]
     public UnityEngine.Sprite Icon;
 
     void Awake()
@@ -23,5 +25,14 @@ public abstract class Interactable : MonoBehaviour
             Context = name;
     }
 
-    public abstract void Action(GameObject target);
+    public void Action(GameObject target)
+    {
+        // Thought of caching this,
+        // but the performance impact is negligible,
+        // and caching may cause unintended effects - Wagner
+        foreach (var interactable in this.GetComponents<IInteractable>())
+        {
+            interactable.Execute(target);
+        }
+    }
 }

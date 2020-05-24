@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4225133640910126}
   - component: {fileID: 114042612924044926}
   - component: {fileID: 114541545991662818}
+  - component: {fileID: 114551593443803138}
   m_Layer: 0
   m_Name: aot_supply
   m_TagString: Untagged
@@ -129,8 +130,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1308685446529770}
-  m_LocalRotation: {x: 0, y: 0.6950263, z: 0, w: 0.7189844}
-  m_LocalPosition: {x: -13.656969, y: 50.132458, z: -1.05265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.055664, y: 0, z: -71.8856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4216480432397648}
@@ -139,7 +140,7 @@ Transform:
   - {fileID: 4778909702170962}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -88.05862, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4778909702170962
 Transform:
   m_ObjectHideFlags: 1
@@ -271,9 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fc211080f11ea4389cdb8a12c35855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 7
-  Context: 
-  Icon: {fileID: 0}
 --- !u!114 &114541545991662818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,6 +298,20 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114551593443803138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308685446529770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3689eedeb8b12bf4db47c1dfe9b65596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 7
+  Context: Supply Station
+  Icon: {fileID: 21300000, guid: f8e666e3a7f15da4c87d485d618f7402, type: 3}
 --- !u!114 &114732798954586966
 MonoBehaviour:
   m_ObjectHideFlags: 1

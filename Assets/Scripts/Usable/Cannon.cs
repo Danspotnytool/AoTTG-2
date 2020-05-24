@@ -2,7 +2,8 @@ using Photon;
 using System;
 using UnityEngine;
 
-public class Cannon : Photon.MonoBehaviour
+[RequireComponent(typeof(Interactable))]
+public class Cannon : Photon.MonoBehaviour, IInteractable
 {
     public Transform ballPoint;
     public Transform barrel;
@@ -70,7 +71,7 @@ public class Cannon : Photon.MonoBehaviour
             {
                 collider.dmg = 0;
             }
-            this.myCannonBall = PhotonNetwork.Instantiate("RCAsset/CannonBallObject", this.ballPoint.position, this.firingPoint.rotation, 0);
+            this.myCannonBall = PhotonNetwork.Instantiate("RC Resources/RC Prefabs/CannonBallObject", this.ballPoint.position, this.firingPoint.rotation, 0);
             this.myCannonBall.GetComponent<Rigidbody>().velocity = (Vector3) (this.firingPoint.forward * 300f);
             this.myCannonBall.GetComponent<CannonBall>().myHero = this.myHero;
             this.myHero.skillCDDuration = 3.5f;
@@ -274,6 +275,17 @@ public class Cannon : Photon.MonoBehaviour
                 }
                 PhotonNetwork.Destroy(base.gameObject);
             }
+        }
+    }
+
+    void IInteractable.Execute(GameObject target)
+    {
+        Debug.Log("Cannon Execute");
+        var hero = target.GetComponent<Hero>();
+        if (hero)
+        {
+            this.myHero = hero;
+            this.enabled = true;
         }
     }
 }

@@ -36365,10 +36365,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1308685446529770, guid: 0dc61e9a9e54df24caecf0ea85d999e4, type: 2}
-      propertyPath: m_Name
-      value: aot_supply
-      objectReference: {fileID: 0}
     - target: {fileID: 114541545991662818, guid: 0dc61e9a9e54df24caecf0ea85d999e4,
         type: 2}
       propertyPath: viewIdField
@@ -36378,10 +36374,6 @@ Prefab:
         type: 2}
       propertyPath: instantiationId
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225133640910126, guid: 0dc61e9a9e54df24caecf0ea85d999e4, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0dc61e9a9e54df24caecf0ea85d999e4, type: 2}

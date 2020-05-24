@@ -1,23 +1,20 @@
 ﻿using UnityEngine;
 
-public class SupplyStationInteractable : Interactable
+[RequireComponent(typeof(Interactable))]
+public class SupplyStationInteractable : MonoBehaviour, IInteractable
 {
-    private void Start () 
+    private void Start()
     {
         if (Minimap.instance != null)
         {
             Minimap.instance.TrackGameObjectOnMinimap(base.gameObject, Color.white, false, true, Minimap.IconStyle.SUPPLY);
         }
-        base.Icon = Resources.Load<UnityEngine.Sprite>("ui/Minimap/Supply Station");
 	}
-	
-    public override void Action(GameObject target)
-    {
 
+    void IInteractable.Execute(GameObject target)
+    {
         Hero hero = target.GetComponent<Hero>();
-        if (hero == null) return;
-        var distance = Vector3.Distance(target.transform.position, base.transform.position);
-        if (IN_GAME_MAIN_CAMERA.gametype == GAMETYPE.SINGLE || hero.photonView.isMine && distance < Radius)
+        if (hero && IN_GAME_MAIN_CAMERA.gametype == GAMETYPE.SINGLE || hero.photonView.isMine)
         {
             hero.getSupply();
         }

@@ -2,7 +2,8 @@
 using System.Linq;
 using UnityEngine;
 
-public class PlayerInteractable : Interactable
+[RequireComponent(typeof(Interactable))]
+public class PlayerInteractable : MonoBehaviour, IInteractable
 {
 
     public List<Interactable> Collisions { get; set; } = new List<Interactable>();
@@ -25,7 +26,7 @@ public class PlayerInteractable : Interactable
         }
     }
 
-    public override void Action(GameObject target)
+    public void Execute(GameObject target)
     {
         //throw new System.NotImplementedException();
     }

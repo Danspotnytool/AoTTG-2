@@ -12,6 +12,12 @@ public class InteractionWheel : MonoBehaviour
 	public Interactable Selected;
 	private List<Interactable> interactables;
 	private GameObject player;
+	private FengCustomInputs inputManager;
+
+	private void Awake()
+	{
+		this.inputManager = GameObject.Find("InputManagerController").GetComponent<FengCustomInputs>();
+	}
 
 	public void OnEnable ()
 	{
@@ -57,7 +63,7 @@ public class InteractionWheel : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetButtonDown("Fire1"))
+		if (this.inputManager.isInputDown[InputCode.attack0])
 		{
 			if (Selected && player)
 			{
